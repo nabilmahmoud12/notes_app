@@ -11,7 +11,7 @@ class CustomBotton extends StatelessWidget {
       height: 60,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
-        color: KPrimaryColor,
+        color: kPrimaryColor,
       ),
       child: const Center(
         child: Text(
