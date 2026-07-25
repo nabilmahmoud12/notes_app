@@ -1,3 +1,6 @@
+import 'package:hive/hive.dart';
+import 'package:hive_flutter/hive_flutter.dart';
+
 class NoteModel {
   final String title;
   final String subtitle;
