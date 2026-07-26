@@ -5,16 +5,23 @@ sealed class NoteState {}
 
 final class NoteInitial extends NoteState {}
 
-final class Noteloading extends NoteState {}
+// part of 'note_cubit.dart';
 
-final class NoteIsuccess extends NoteState {
-  final List<NoteModel> notes;
+// @immutable
+// sealed class NoteState {}
 
-  NoteIsuccess(this.notes);
-}
+// final class NoteInitial extends NoteState {}
 
-final class Notefailure extends NoteState {
-  final String errormessage;
+// final class Noteloading extends NoteState {}
 
-  Notefailure({required this.errormessage});
-}
+// final class NoteIsuccess extends NoteState {
+//   final List<NoteModel> notes;
+
+//   NoteIsuccess(this.notes);
+// }
+
+// final class Notefailure extends NoteState {
+//   final String errormessage;
+
+//   Notefailure({required this.errormessage});
+// }
