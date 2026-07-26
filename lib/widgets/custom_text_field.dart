@@ -19,7 +19,7 @@ class CustomTextField extends StatelessWidget {
         if (value?.isEmpty ?? true) {
           return "Field is requird";
         } else {
-          return "ok";
+          return null; //ok
         }
       },
       onSaved: onsaved,
