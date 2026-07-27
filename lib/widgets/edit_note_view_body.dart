@@ -1,23 +1,55 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:notsapp/cubits/note_cubit/note_cubit.dart';
+import 'package:notsapp/models/note_model.dart';
 import 'package:notsapp/widgets/custom_AppBar.dart';
 import 'package:notsapp/widgets/custom_text_field.dart';
 
-class EditNoteViewBody extends StatelessWidget {
-  const EditNoteViewBody({super.key});
+class EditNoteViewBody extends StatefulWidget {
+  const EditNoteViewBody({super.key, required this.note});
+  final NoteModel note;
 
+  @override
+  State<EditNoteViewBody> createState() => _EditNoteViewBodyState();
+}
+
+String? title, subtitle;
+
+class _EditNoteViewBodyState extends State<EditNoteViewBody> {
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16),
-      child: const Column(
+      child: Column(
         children: [
           SizedBox(height: 80),
-          CustomAppBar(title: 'Edit Note', icon: Icons.check),
+          CustomAppBar(
+            onpressed: () {
+              widget.note.title = title ?? widget.note.title;
+              widget.note.subtitle = subtitle ?? widget.note.subtitle;
+              widget.note.save();
+              BlocProvider.of<NoteCubit>(context).fetchAllNotes();
+              Navigator.pop(context);
+            },
+            title: 'Edit Note',
+            icon: Icons.check,
+          ),
           SizedBox(height: 50),
-          CustomTextField(hint: "title"),
+          CustomTextField(
+            onChanged: (value) {
+              title = value;
+            },
+            hint: widget.note.title,
+          ),
           SizedBox(height: 20),
 
-          CustomTextField(hint: "content", maxlines: 8),
+          CustomTextField(
+            onChanged: (value) {
+              subtitle = value;
+            },
+            hint: widget.note.subtitle,
+            maxlines: 8,
+          ),
         ],
       ),
     );

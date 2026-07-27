@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:notsapp/cubits/note_cubit/note_cubit.dart';
+import 'package:notsapp/models/note_model.dart';
 import 'package:notsapp/widgets/custom_AppBar.dart';
 import 'package:notsapp/widgets/notes_list_view.dart';
 
@@ -12,6 +13,7 @@ class NotesViewBody extends StatefulWidget {
 }
 
 class _NotesViewBodyState extends State<NotesViewBody> {
+  late final NoteModel note;
   @override
   void initState() {
     super.initState();
