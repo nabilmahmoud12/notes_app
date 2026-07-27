@@ -12,6 +12,7 @@ class AddNoteCubit extends Cubit<AddNoteState> {
     debugPrint('AddNoteCubit Created');
   }
 
+  Color color = Color.fromARGB(255, 242, 38, 7);
   @override
   Future<void> close() {
     debugPrint('AddNoteCubit Closed');
@@ -19,6 +20,7 @@ class AddNoteCubit extends Cubit<AddNoteState> {
   }
 
   addNote(NoteModel note) async {
+    note.color = color.value;
     emit(AddNoteloading());
 
     try {
