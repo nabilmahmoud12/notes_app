@@ -20,7 +20,7 @@ class AddNoteBottomSheet extends StatelessWidget {
           }
         },
         builder: (context, state) {
-          print('nabillllllllllllll>> ui reduild');
+          print('nabilllllllllllllllllll>> ui reduild');
           return AbsorbPointer(
             absorbing: state is AddNoteloading
                 ? true
