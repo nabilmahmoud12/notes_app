@@ -5,6 +5,8 @@ sealed class NoteState {}
 
 final class NoteInitial extends NoteState {}
 
+final class NoteIsuccess extends NoteState {}
+
 // part of 'note_cubit.dart';
 
 // @immutable
