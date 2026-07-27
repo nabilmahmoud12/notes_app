@@ -7,13 +7,12 @@ import 'package:notsapp/widgets/custom_note_item.dart';
 
 class NotesListView extends StatelessWidget {
   const NotesListView({super.key});
-  final List<Color> color = const [Colors.yellow];
 
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<NoteCubit, NoteState>(
       builder: (context, state) {
-        List<NoteModel> notes = BlocProvider.of<NoteCubit>(context).notes ?? [];
+        List<NoteModel> notes = BlocProvider.of<NoteCubit>(context).notes!;
         return Expanded(
           child: Padding(
             padding: const EdgeInsets.symmetric(vertical: 15),
@@ -35,7 +34,7 @@ class NotesListView extends StatelessWidget {
                         ),
                       );
                     },
-                    child: const NoteItem(),
+                    child: NoteItem(note: notes[index]),
                   ),
                 );
               },
