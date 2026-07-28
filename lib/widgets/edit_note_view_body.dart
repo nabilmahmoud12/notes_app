@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:notsapp/Views/helper/constants.dart';
-import 'package:notsapp/cubits/add_note_cubit/add_note_cubit.dart';
 import 'package:notsapp/cubits/note_cubit/note_cubit.dart';
 import 'package:notsapp/models/note_model.dart';
 import 'package:notsapp/widgets/Edit_note_color_list_view.dart';
-import 'package:notsapp/widgets/color_item_and_list_view.dart';
 import 'package:notsapp/widgets/custom_AppBar_1_3.dart';
 import 'package:notsapp/widgets/custom_text_field_2_3.dart';
 
