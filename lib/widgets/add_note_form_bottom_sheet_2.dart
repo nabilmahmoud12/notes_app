@@ -3,8 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:notsapp/cubits/add_note_cubit/add_note_cubit.dart';
 import 'package:notsapp/models/note_model.dart';
 import 'package:notsapp/widgets/color_item_and_list_view.dart';
-import 'package:notsapp/widgets/custom_botton.dart';
-import 'package:notsapp/widgets/custom_text_field.dart';
+import 'package:notsapp/widgets/custom_botton_2.dart';
+import 'package:notsapp/widgets/custom_text_field_2_3.dart';
 
 class AddNoteForm extends StatefulWidget {
   const AddNoteForm({super.key});

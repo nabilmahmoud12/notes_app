@@ -26,7 +26,7 @@ class CustomTextField extends StatelessWidget {
       onChanged: onChanged,
       onSaved: onsaved,
       maxLines: maxlines,
-      cursorColor: kPrimaryColor,
+      cursorColor: const Color.fromARGB(255, 249, 0, 0),
       decoration: InputDecoration(
         hintText: hint,
         hintStyle: TextStyle(color: kPrimaryColor, fontSize: 20),

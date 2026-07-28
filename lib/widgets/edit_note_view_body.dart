@@ -6,8 +6,8 @@ import 'package:notsapp/cubits/note_cubit/note_cubit.dart';
 import 'package:notsapp/models/note_model.dart';
 import 'package:notsapp/widgets/Edit_note_color_list_view.dart';
 import 'package:notsapp/widgets/color_item_and_list_view.dart';
-import 'package:notsapp/widgets/custom_AppBar.dart';
-import 'package:notsapp/widgets/custom_text_field.dart';
+import 'package:notsapp/widgets/custom_AppBar_1_3.dart';
+import 'package:notsapp/widgets/custom_text_field_2_3.dart';
 
 class EditNoteViewBody extends StatefulWidget {
   const EditNoteViewBody({super.key, required this.note});
